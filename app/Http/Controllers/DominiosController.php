@@ -48,7 +48,10 @@ class DominiosController extends Controller
      */
     public function show($id)
     {
-        //
+        $dominios = \App\Dominios::find($id);
+        $paginas = \App\Dominios::find($id)->paginas;
+    
+        return view('dominios.show', compact('dominios','paginas'));
     }
 
     /**

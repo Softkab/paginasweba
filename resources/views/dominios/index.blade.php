@@ -1,7 +1,8 @@
 <table>
 <tbody>
-<?php foreach ($dominios as $key => $value): ?>
-  <tr><td><?php echo $key+1; ?></td><td><?php echo $value->nombre ?></td></tr>
-<?php endforeach ?>
+@foreach ($dominios as $key => $value)
+   <tr><td>{{$key+1}} </td><td>{{$value->nombre}}</td><td><a href="/dominios/{{$value->id}}">editar</a></td><td>ver más</td></tr>
+@endforeach
+
 </tbody>
 </table>

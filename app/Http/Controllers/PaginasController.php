@@ -48,7 +48,9 @@ class PaginasController extends Controller
      */
     public function show($id)
     {
-        //
+         $paginas = \App\Paginas::find($id);
+    
+        return view('paginas.show', compact('paginas'));
     }
 
     /**
@@ -60,6 +62,9 @@ class PaginasController extends Controller
     public function edit($id)
     {
         //
+       // $dominios = \App\Dominios::find($id);
+        $paginas = \App\Paginas::find($id);
+        return view('paginas.edit', compact('paginas'));
     }
 
     /**
